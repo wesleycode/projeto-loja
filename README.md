@@ -1,3 +1,3 @@
 # Projeto de uma loja online utilizando NODE.JS #
 
-[ ] Iniciando Projeto
+Simple and clean!
