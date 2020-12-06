@@ -1,28 +1,67 @@
-const Usuario = require("../Usuario");
+const UsuarioDAO = require("../../database/UsuarioDAO");
 
-exports.gravarUsuario = (req, res) => {
-    console.log(req.body.nome);
-    console.log(req.body.email);
-    console.log(req.body.data);
-    console.log(req.body.sexo);
-    console.log(req.body.senha);
-    Usuario.sync({force: true}).then(function () {
-        Usuario.create({
-            nome: req.body.nome,
-            email: req.body.email,
-            senha: req.body.senha,
-            idade: req.body.idade,
-            sexo: req.body.sexo,
-        }).then(function () {
-            res.status(200).send("Cadastrado");
-        }).catch(function () {
-            res.status(400).send("Rosca!");
-        });
-    });
+exports.save = (req, res) => {
+    if (validarCadastro(req, res)) {
+        UsuarioDAO.save(req, res);
+    } else {
+        res.status(401);
+    }
 };
 
 exports.logarUsuario = (req, res) => {
-    console.log(req.body.email);
-    console.log(req.body.senha);
-    res.status(200).send("Chegou");
+    if (validarLogin(req, res)) {
+        UsuarioDAO.login(req, res);
+    } else {
+        res.status(401);
+    }
+};
+
+function validarLogin(req, res) {
+
+    let errors = [];
+
+    if (!req.body.email || typeof req.body.email === undefined) {
+        errors.push({text: "Email inválido!"});
+    }
+
+    if (!req.body.senha || typeof req.body.senha === undefined) {
+        errors.push({text: "Senha inválida!"});
+    }
+
+    if (errors.length > 0) {
+        res.render("login", {error: errors});
+        return false;
+    }
+    return true;
+}
+
+function validarCadastro(req, res) {
+
+    let errors = [];
+
+    if (!req.body.nome || typeof req.body.nome === undefined) {
+        errors.push({text: "Nome inválido!"});
+    }
+
+    if (!req.body.email || typeof req.body.email === undefined) {
+        errors.push({text: "Email inválido!"});
+    }
+
+    if (!req.body.data || typeof req.body.data === undefined) {
+        errors.push({text: "Data inválida!"});
+    }
+
+    if (!req.body.sexo || typeof req.body.sexo === undefined) {
+        errors.push({text: "Sexo inválido!"});
+    }
+
+    if (!req.body.senha || typeof req.body.senha === undefined) {
+        errors.push({text: "Senha inválida!"});
+    }
+
+    if (errors.length > 0) {
+        res.render("cadastro", {error: errors});
+        return false;
+    }
+    return true;
 }

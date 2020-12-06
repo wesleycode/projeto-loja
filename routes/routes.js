@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const UsuarioBO = require("../models/validations/UsuarioBO");
 
+// Páginas //
 router.get("/", (req, res) => {
     res.render('index');
 });
@@ -20,6 +21,6 @@ router.get("/cadastro", (req, res) => {
 
 // Envios //
 router.post("/logar", UsuarioBO.logarUsuario);
-router.post("/cadastrar", UsuarioBO.gravarUsuario);
+router.post("/cadastrar", UsuarioBO.save);
 
 module.exports = router;

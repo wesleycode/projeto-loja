@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize');
 const Model = Sequelize.Model;
 
-const sequelize = new Sequelize('teste', 'postgres', 'postgres', {
+const sequelize = new Sequelize('teste', process.env.DATABASE_USERNAME, process.env.DATABASE_PASSWORD, {
     host: 'localhost',
     dialect: 'postgres'
 });
 
-console.log("Conectando...");
+console.log("Conectando no Database...");
 
 sequelize.authenticate().then(() => {
     console.log("Conectado no banco de dados...");
