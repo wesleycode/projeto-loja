@@ -1,10 +1,12 @@
+const UsuarioBO = require("../models/validations/UsuarioBO");
+const ProdutoBO = require("../models/validations/ProdutoBO");
 const express = require("express");
 const router = express.Router();
-const UsuarioBO = require("../models/validations/UsuarioBO");
+
 
 // Páginas //
 router.get("/", (req, res) => {
-    res.render('index');
+    ProdutoBO.findAll(req,res);
 });
 
 router.get("/sobre", (req, res) => {

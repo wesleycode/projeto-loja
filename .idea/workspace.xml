@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec96d841-7aa2-40a8-8e92-c4a3cbcbe5f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/UsuarioDAO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/ProdutoDAO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Produto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/validations/ProdutoBO.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/validations/UsuarioBO.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/validations/UsuarioBO.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.handlebars" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1l4j1AHieF330bEjSTWKD8PT5ef" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,7 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -50,6 +51,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projetos\projeto-loja\database" />
+      <recent name="D:\Projetos\projeto-loja\models\validations" />
+      <recent name="D:\Projetos\projeto-loja\models" />
       <recent name="D:\Projetos\node-teste\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -112,6 +116,7 @@
       <workItem from="1607190622956" duration="2029000" />
       <workItem from="1607195152624" duration="636000" />
       <workItem from="1607208274734" duration="6024000" />
+      <workItem from="1607256914367" duration="4349000" />
     </task>
     <servers />
   </component>
